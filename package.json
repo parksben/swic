@@ -1,0 +1,29 @@
+{
+  "name": "swic",
+  "description": "Simple Web Infomation Collector - 简单、轻量级的网页信息采集器",
+  "version": "0.1.0",
+  "author": "parksben",
+  "license": "MIT",
+  "keywords": [
+    "content collection",
+    "infomation collector",
+    "web parser",
+    "blog crawler",
+    "网页采集",
+    "网页爬虫"
+  ],
+  "scripts": {
+    "clear-data": "npx rimraf output",
+    "fetch-list": "node fetchList.js",
+    "fetch-detail": "node fetchDetail.js",
+    "start": "npm run clear-data && npm run fetch-list && npm run fetch-detail"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.0.0",
+    "fs-extra": "^8.1.0",
+    "rimraf": "^2.6.3"
+  },
+  "devDependencies": {}
+}
