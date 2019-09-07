@@ -1,14 +1,15 @@
 /**
- * This is a demo of config file to startup your own collector
+ * This is a demo of project file to startup your own collector
+ * This demo is used to collect blogs from http://www.chanpin100.com/
  */
 
-// Parsing web page data from html plain text by using `cheerio`.
+// Parsing html plain text by using `cheerio`.
 const cheerio = require('cheerio');
 
 // Some utility functions here.
 const { utf8ToWord } = require('../utils');
 
-// The `[name].config.js` module exports an object consisting of a series of properties finally.
+// This `[name].project.js` module exports an object consisting of a series of properties finally.
 module.exports = {
   // Parameters of `axios` which the collector request defferent urls by using it,
   // refer to the homepage of `cheerio` for detail: https://github.com/cheeriojs/cheerio

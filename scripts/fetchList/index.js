@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
-const requestSequence = require('./requestSequence');
-const { task } = require('./config');
+const requestSequence = require('../utils/requestSequence');
+const { task } = require('../utils/config');
 
 const requestPageRange = async (start = 1, end = 10) => {
   const urlSeq = [];
@@ -18,12 +18,12 @@ const requestPageRange = async (start = 1, end = 10) => {
     task.list.dataModifier
   );
   const resultList = result.reduce((pre, cur) => pre.concat(cur));
-  const file = path.resolve(__dirname, task.list.output);
+  const file = path.resolve(__dirname, '../', task.list.output);
 
   fs.ensureFileSync(file);
   fs.writeFileSync(file, JSON.stringify(resultList, null, 2), 'utf8');
 
-  console.log('\n==> All list fetched.');
+  console.log('\n==> All list fetched.\n');
 };
 
 console.log('==> Fetching content list...\n');
