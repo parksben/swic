@@ -15,8 +15,9 @@
   "scripts": {
     "fetch-list": "node ./scripts/fetchList",
     "fetch-content": "node ./scripts/fetchContent",
-    "new-project": "node ./scripts/newProject",
-    "use-project": "node ./scripts/useProject",
+    "create-project": "node ./scripts/createProject",
+    "switch-project": "node ./scripts/switchProject",
+    "list-project": "node ./scripts/listProject",
     "start": "npm run fetch-list && npm run fetch-content"
   },
   "dependencies": {

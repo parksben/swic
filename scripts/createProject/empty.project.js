@@ -6,8 +6,8 @@
 // Parsing html plain text by using `cheerio`.
 // const cheerio = require('cheerio');
 
-// Some utility functions here.
-// const { utf8ToWord } = require('../utils');
+// Use some utility functions in the handler directory.
+// const utf8ToWord = require('../handlers/utf8ToWord');
 
 module.exports = {
   axios: {

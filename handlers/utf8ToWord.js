@@ -1,4 +1,5 @@
-exports.utf8ToWord = text => {
+// utf8ToWord
+module.exports = text => {
   if (!text) return '';
   const pattForUtf8 = /&#x([^;]+);/g;
   return text.replace(pattForUtf8, (s, s1) =>
