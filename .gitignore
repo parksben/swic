@@ -1,4 +1,7 @@
 node_modules
-output/
+
+output/*
+!output/
+
 project/
 !project/demo.project.js

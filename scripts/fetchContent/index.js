@@ -1,9 +1,13 @@
 const fs = require('fs-extra');
 const path = require('path');
 const requestSequence = require('../utils/requestSequence');
-const { task } = require('../utils/config');
+const {
+  env: { task },
+  rootDir,
+} = require('../utils/config');
 
-const PAGE_LIST = require(`../${task.list.output}`) || [];
+const PAGE_LIST =
+  require(path.relative(__dirname, path.join(rootDir, task.list.output))) || [];
 
 const requestDetail = async () => {
   const urlFieldName = task.detail.url.match(/{{([^}]+)}}/)[1];
@@ -22,11 +26,7 @@ const requestDetail = async () => {
     task.detail.concurrent,
     task.detail.dataModifier
   );
-  const file = path.resolve(
-    __dirname,
-    '../',
-    task.detail.output || task.list.output
-  );
+  const file = path.resolve(rootDir, task.detail.output || task.list.output);
 
   fs.ensureFileSync(file);
   fs.writeFileSync(file, JSON.stringify(result, null, 2), 'utf8');

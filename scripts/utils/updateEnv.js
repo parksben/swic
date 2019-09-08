@@ -1,8 +1,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 const dotEnv = require('dotenv');
+const { rootDir } = require('../utils/config');
 
-const ENV_FILE = path.resolve(__dirname, '../../.env');
+const ENV_FILE = path.resolve(rootDir, './.env');
 
 module.exports = keyVal => {
   fs.ensureFileSync(ENV_FILE);

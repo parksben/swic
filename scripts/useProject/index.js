@@ -1,9 +1,10 @@
 const fs = require('fs-extra');
 const path = require('path');
+const { rootDir } = require('../utils/config');
 const updateEnv = require('../utils/updateEnv');
 
 const PROJECT_LIST = fs
-  .readdirSync(path.resolve(__dirname, '../../project'))
+  .readdirSync(path.resolve(rootDir, './project'))
   .map(x => x.replace('.project.js', ''));
 
 function checkoutProject(projectName) {

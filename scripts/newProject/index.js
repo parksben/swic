@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const { rootDir } = require('../utils/config');
 
 function copyEmptyProject(projectName) {
   if (projectName) {
@@ -8,8 +9,8 @@ function copyEmptyProject(projectName) {
       'utf-8'
     );
     const outputFile = path.resolve(
-      __dirname,
-      `../../project/${projectName}.project.js`
+      rootDir,
+      `./project/${projectName}.project.js`
     );
 
     fs.ensureFileSync(outputFile);

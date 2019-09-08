@@ -1,7 +1,7 @@
 const axios = require('axios');
-const config = require('./config');
+const { env } = require('./config');
 
-const instance = axios.create(config.axios);
+const instance = axios.create(env.axios);
 
 const requestPage = async (url, dataModifier = d => d) => {
   let requestMethod = 'get';
