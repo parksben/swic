@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const requestSequence = require('../utils/requestSequence');
 const {
-  env: { task },
+  projConf: { task },
   rootDir,
 } = require('../utils/config');
 

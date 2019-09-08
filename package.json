@@ -18,9 +18,11 @@
     "create-project": "node ./scripts/createProject",
     "switch-project": "node ./scripts/switchProject",
     "list-project": "node ./scripts/listProject",
+    "validate-project": "node ./scripts/validateProject",
     "start": "npm run fetch-list && npm run fetch-content"
   },
   "dependencies": {
+    "@hapi/joi": "^15.1.1",
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.0.0",

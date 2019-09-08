@@ -78,7 +78,7 @@ module.exports = {
       },
 
       // The field name in output file for the result `detail.dataModifier` returns.
-      filed: 'content_html',
+      field: 'content_html',
 
       // The output path of the data collections (only supports json format currently).
       output: './output/chanpin100/result.json',

@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const requestSequence = require('../utils/requestSequence');
 const {
-  env: { task },
+  projConf: { task },
   rootDir,
 } = require('../utils/config');
 
@@ -17,7 +17,7 @@ const requestDetail = async () => {
     method: task.detail.method || 'GET',
     mergeFunc: (data, url) => ({
       ...url,
-      [task.detail.filed]: data,
+      [task.detail.field]: data,
     }),
   }));
 
@@ -34,5 +34,5 @@ const requestDetail = async () => {
   console.log('\n==> All page fetched.\n');
 };
 
-console.log('==> Fetching detail...\n');
+console.log('==> Fetching contents...\n');
 requestDetail();

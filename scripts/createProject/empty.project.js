@@ -3,12 +3,6 @@
  * Refer to [Swic Homepage](https://github.com/parksben/swic) to learn about following codes.
  */
 
-// Parsing html plain text by using `cheerio`.
-// const cheerio = require('cheerio');
-
-// Use some utility functions in the handler directory.
-// const utf8ToWord = require('../handlers/utf8ToWord');
-
 module.exports = {
   axios: {
     baseURL: 'http://something.domain/',
@@ -18,19 +12,13 @@ module.exports = {
 
   task: {
     list: {
-      url: { url: 'list/{{pn}}', method: 'GET' },
-      range: [1, 10],
-      concurrent: 50,
+      url: 'list/{{pn}}',
       dataModifier: list => list,
-      output: './output/list.json',
     },
 
     detail: {
-      url: { url: 'detail/{{id}}', method: 'GET' },
-      concurrent: 10,
+      url: 'detail/{{id}}',
       dataModifier: content => content,
-      filed: 'content_field_name',
-      output: './output/detail.json',
     },
   },
 };
