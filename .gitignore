@@ -1,7 +1,7 @@
 node_modules
 
 output/*
-!output/
+!output/.EMPTY
 
 project/
 !project/demo.project.js
