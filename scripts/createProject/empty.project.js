@@ -13,6 +13,7 @@ module.exports = {
   task: {
     list: {
       url: 'list/{{pn}}',
+      range: [1, 10],
       dataModifier: list => list,
     },
 

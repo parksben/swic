@@ -1,8 +1,12 @@
-# Swic
+<div align="center"><img src="logo.png" alt="Swic" /></div>
 
-**S**imple **W**eb **I**nfomation **C**ollector
+<h1 align="center">Swic</h1>
 
-简单易用的 Node.js 网页信息采集工具
+<p align="center"><b>S</b>imple <b>W</b>eb <b>I</b>nfomation <b>C</b>ollector</p>
+
+<p align="center">简单易用的 Node.js 网页信息采集工具</p>
+
+<br/>
 
 ## 🍺 功能特性
 
